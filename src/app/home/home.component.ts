@@ -25,10 +25,24 @@ export class HomeComponent implements OnInit {
 		submissionCount: 1
 		},
 		{
-		id: 8,
+		id: 3,
 		item: 'mayonaise',
 		expirationDays: 180,
 		fullImagePath: './assets/mayo.jpg',
+		submissionCount: 1
+		},
+		{
+		id: 4,
+		item: 'Apples',
+		expirationDays: 90,
+		fullImagePath: './assets/apples.png',
+		submissionCount: 1
+		},
+				{
+		id: 5,
+		item: 'Bread',
+		expirationDays: 5,
+		fullImagePath: './assets/bread.jpg',
 		submissionCount: 1
 		}
 	];

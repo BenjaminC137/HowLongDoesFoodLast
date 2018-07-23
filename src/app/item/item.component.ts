@@ -10,8 +10,9 @@ export class ItemComponent implements OnInit {
 
 	@Input() item: FoodProperties;
 
-
-
+clickVote(){
+this.item.submissionCount = this.item.submissionCount + 1;
+}
   constructor() { }
 
   ngOnInit() {

@@ -1,18 +1,43 @@
 <img class="img-fluid card-img-top rounded-image"src="{{item.fullImagePath}}"
 alt="{{item.item}}">
-<h3 class="card-title" style="padding-top: 5px">{{item.item}}</h3>
+<h3 class="card-title" style="padding-top: 5px; padding-right: 5px">{{item.item}}</h3>
 <div class="card-body" style="padding: 0px;"></div>
 
 <ul class="list-group list-group-flush">
 	<li class="list-group-item">
 		How long does this last in the fridge?
 		<br>
-		{{item.expirationDays}} days
+		<h1>{{item.expirationDays}} days</h1>
 	</li>
-    <li class="list-group-item">comments</li>
+    <li class="list-group-item">
+
+
+
+  <a class="btn btn-primary" data-toggle="collapse" href="#{{item.id}}comments" role="button" aria-expanded="false" aria-controls="collapseExample">
+    comments
+  </a>
+
+<div class="collapse" id="{{item.id}}comments">
+  <div class="card card-body">
+    "I think you can go a few days longer as long as it doesn't smell bad." -Johnny Appleseed
+  </div>
+</div>
+	</li>
+	<li class="list-group-item">
+
+	<!--	<button (click) = "item.submissionCount = item.submissionCount + 1" class="btn" style="border-radius: 5px">Vote!</button>-->
+	<button (click) = "clickVote()" class="btn">add vote!</button>
+
+	</li>
 	<li class="list-group-item">votes: {{item.submissionCount}}</li>
 </ul>
-<div class="card-footer">
-    <a href="#" class="card-link">Vote </a>
-	<button (click) = "item.submissionCount = item.submissionCount + 1">Vote!</button>
+<div class="card-footer" style="text-align: center">
+	  <a class="btn btn-primary" data-toggle="collapse" href="#{{item.id}}vote" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Vote!
+  </a>
+	<div class="collapse" id="{{item.id}}vote">
+	  <div class="card card-body">
+		I think seed
+	  </div>
+	</div>
 </div>
