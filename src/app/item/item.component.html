@@ -1,18 +1,18 @@
-<img class="img-fluid rounded-image"src="{{item.fullImagePath}}"
+<img class="img-fluid card-img-top rounded-image"src="{{item.fullImagePath}}"
 alt="{{item.item}}">
-  <div class="card-body img">
-    <h3 class="card-title">{{item.item}}</h3>
-    <div class="card-text">{{item.item}} ID: {{item.id}} How long does this last in the fridge?</div>
-	  <br>
-	   <div class="card-text">
-	  How long does this last in the fridge?
-	  </div>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{item.expirationDays}} days</li>
-    <li class="list-group-item">item ID: {{item.id}}</li>
+<h3 class="card-title" style="padding-top: 5px">{{item.item}}</h3>
+<div class="card-body" style="padding: 0px;"></div>
+
+<ul class="list-group list-group-flush">
+	<li class="list-group-item">
+		How long does this last in the fridge?
+		<br>
+		{{item.expirationDays}} days
+	</li>
     <li class="list-group-item">comments</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-  </div>
+	<li class="list-group-item">votes: {{item.submissionCount}}</li>
+</ul>
+<div class="card-footer">
+    <a href="#" class="card-link">Vote </a>
+	<button (click) = "item.submissionCount = item.submissionCount + 1">Vote!</button>
+</div>

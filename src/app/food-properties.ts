@@ -3,4 +3,5 @@ export class FoodProperties {
 	item: string;
 	expirationDays: number;
 	fullImagePath: string;
+	submissionCount: number;
 }

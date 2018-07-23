@@ -14,19 +14,22 @@ export class HomeComponent implements OnInit {
 		id: 1,
 		item: 'chicken',
 		expirationDays: 3,
-		fullImagePath: './assets/chicken.png'
+		fullImagePath: './assets/chicken.png',
+		submissionCount: 1
 		},
 		{
 		id: 2,
 		item: 'ground beef',
 		expirationDays: 3,
-		fullImagePath: './assets/beef.jpg'
+		fullImagePath: './assets/beef.jpg',
+		submissionCount: 1
 		},
 		{
 		id: 8,
 		item: 'mayonaise',
 		expirationDays: 180,
-		fullImagePath: './assets/mayo.jpg'
+		fullImagePath: './assets/mayo.jpg',
+		submissionCount: 1
 		}
 	];
   constructor() { }
